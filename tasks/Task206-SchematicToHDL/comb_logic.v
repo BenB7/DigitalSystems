@@ -17,14 +17,14 @@
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 // CREATED		"Mon Jan 30 14:15:00 2023"
 
-module comb_logic(
-	KEY0,
-	KEY1,
-	LED0
-);
+//module comb_logic(
+//	KEY0,
+//	KEY1,
+//	LED0
+//);
 
 
-module comb_logic (output wire	LED0, input wire	KEY0, input wire	KEY1);
+module comb_logic(output wire LED0, input wire KEY0, input wire KEY1);
 
 
 wire	SYNTHESIZED_WIRE_0;
