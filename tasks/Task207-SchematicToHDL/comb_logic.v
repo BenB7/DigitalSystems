@@ -11,31 +11,37 @@
 // the sole purpose of programming logic devices manufactured by
 // Intel and sold by Intel or its authorized distributors.  Please
 // refer to the applicable agreement for further details, at
-// https://fpgasoftware.intel.com/eula
+// https://fpgasoftware.intel.com/eula.
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Mon Jan 30 14:15:00 2023"
+// CREATED		"Mon Jan 30 15:14:04 2023"
+
+module comb_logic(
+	KEY0,
+	KEY1,
+	MODE,
+	LED0
+);
 
 
-module comb_logic(output wire LED0, input wire KEY0, input wire KEY1);
+input wire	KEY0;
+input wire	KEY1;
+input wire	MODE;
+output wire	LED0;
+
+wire	[1:0] data;
 
 
-wire	SYNTHESIZED_WIRE_0;
-wire	SYNTHESIZED_WIRE_1;
-wire	SYNTHESIZED_WIRE_2;
-wire	SYNTHESIZED_WIRE_3;
 
 
 
-assign	LED0 = SYNTHESIZED_WIRE_2 | SYNTHESIZED_WIRE_3;
+mux21	b2v_inst(
+	.sel(MODE),
+	.D(data),
+	.Y(LED0));
 
-assign	SYNTHESIZED_WIRE_1 =  ~KEY1;
-
-assign	SYNTHESIZED_WIRE_3 = SYNTHESIZED_WIRE_0 & KEY1;
-
-assign	SYNTHESIZED_WIRE_0 =  ~KEY0;
-
-assign	SYNTHESIZED_WIRE_2 = KEY0 & SYNTHESIZED_WIRE_1;
+assign	data[1] = KEY1;
+assign	data[0] = KEY0;
 
 endmodule
