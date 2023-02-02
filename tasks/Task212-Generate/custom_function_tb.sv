@@ -9,7 +9,8 @@ custom_function #(.f(2)) u2(Y3, A, B);
 initial
 begin
 
-	// WRITE YOUR CODE HERE
+	if Y=A|B
+	Y=Y1
 
 end
 

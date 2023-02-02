@@ -497,16 +497,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 416 136)
 )
 (connector
-	(text "sw[2]" (rect 194 480 219 497)(font "Intel Clear" ))
-	(pt 184 496)
-	(pt 224 496)
-)
-(connector
-	(text "sw[3]" (rect 194 504 219 521)(font "Intel Clear" ))
-	(pt 184 520)
-	(pt 224 520)
-)
-(connector
 	(text "led[1]" (rect 754 184 782 201)(font "Intel Clear" ))
 	(pt 744 200)
 	(pt 824 200)
@@ -520,36 +510,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "led[3]" (rect 754 232 782 249)(font "Intel Clear" ))
 	(pt 744 248)
 	(pt 824 248)
-)
-(connector
-	(text "led[4]" (rect 754 256 782 273)(font "Intel Clear" ))
-	(pt 744 272)
-	(pt 824 272)
-)
-(connector
-	(text "led[5]" (rect 754 280 782 297)(font "Intel Clear" ))
-	(pt 744 296)
-	(pt 824 296)
-)
-(connector
-	(text "led[6]" (rect 754 304 782 321)(font "Intel Clear" ))
-	(pt 744 320)
-	(pt 824 320)
-)
-(connector
-	(text "led[7]" (rect 754 328 782 345)(font "Intel Clear" ))
-	(pt 744 344)
-	(pt 824 344)
-)
-(connector
-	(text "sw[0]" (rect 194 432 219 449)(font "Intel Clear" ))
-	(pt 184 448)
-	(pt 224 448)
-)
-(connector
-	(text "sw[1]" (rect 194 456 219 473)(font "Intel Clear" ))
-	(pt 184 472)
-	(pt 224 472)
 )
 (connector
 	(text "CK1" (rect 890 504 910 521)(font "Intel Clear" ))
@@ -582,18 +542,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "led[0]" (rect 754 160 782 177)(font "Intel Clear" ))
 	(pt 744 176)
 	(pt 824 176)
-)
-(connector
-	(text "sw[3..0]" (rect 306 448 342 465)(font "Intel Clear" ))
-	(pt 360 464)
-	(pt 296 464)
-	(bus)
-)
-(connector
-	(text "led[7..4]" (rect 538 448 576 465)(font "Intel Clear" ))
-	(pt 528 464)
-	(pt 592 464)
-	(bus)
 )
 (connector
 	(text "key0" (rect 194 248 217 265)(font "Intel Clear" ))
@@ -647,9 +595,125 @@ https://fpgasoftware.intel.com/eula.
 	(pt 464 312)
 	(pt 520 312)
 )
+(connector
+	(text "led[4]" (rect 754 256 782 273)(font "Intel Clear" ))
+	(pt 720 272)
+	(pt 824 272)
+)
+(connector
+	(text "led[5]" (rect 754 280 782 297)(font "Intel Clear" ))
+	(pt 720 296)
+	(pt 824 296)
+)
+(connector
+	(pt 720 296)
+	(pt 720 272)
+	(bus)
+)
+(connector
+	(text "led[6]" (rect 754 304 782 321)(font "Intel Clear" ))
+	(pt 720 320)
+	(pt 824 320)
+)
+(connector
+	(pt 720 320)
+	(pt 720 296)
+	(bus)
+)
+(connector
+	(text "led[7]" (rect 754 328 782 345)(font "Intel Clear" ))
+	(pt 720 344)
+	(pt 824 344)
+)
+(connector
+	(pt 720 464)
+	(pt 720 344)
+	(bus)
+)
+(connector
+	(pt 720 344)
+	(pt 720 320)
+	(bus)
+)
+(connector
+	(text "sw[2]" (rect 194 480 219 497)(font "Intel Clear" ))
+	(pt 288 496)
+	(pt 184 496)
+)
+(connector
+	(pt 288 496)
+	(pt 288 464)
+)
+(connector
+	(text "sw[0]" (rect 194 432 219 449)(font "Intel Clear" ))
+	(pt 280 448)
+	(pt 184 448)
+)
+(connector
+	(pt 280 464)
+	(pt 288 464)
+	(bus)
+)
+(connector
+	(pt 280 448)
+	(pt 280 464)
+)
+(connector
+	(text "sw[3..0]" (rect 306 448 342 465)(font "Intel Clear" ))
+	(pt 288 464)
+	(pt 360 464)
+	(bus)
+)
+(connector
+	(text "sw[3]" (rect 194 504 219 521)(font "Intel Clear" ))
+	(pt 584 520)
+	(pt 184 520)
+)
+(connector
+	(pt 584 520)
+	(pt 584 464)
+)
+(connector
+	(pt 584 464)
+	(pt 528 464)
+	(bus)
+)
+(connector
+	(pt 184 472)
+	(pt 264 472)
+)
+(connector
+	(pt 264 472)
+	(pt 264 504)
+)
+(connector
+	(pt 608 504)
+	(pt 264 504)
+)
+(connector
+	(pt 608 504)
+	(pt 608 464)
+)
+(connector
+	(text "led[7..4]" (rect 538 448 576 465)(font "Intel Clear" ))
+	(pt 720 464)
+	(pt 608 464)
+	(bus)
+)
+(connector
+	(pt 608 464)
+	(pt 584 464)
+	(bus)
+)
 (junction (pt 744 520))
 (junction (pt 296 264))
 (junction (pt 312 288))
+(junction (pt 720 296))
+(junction (pt 720 320))
+(junction (pt 720 344))
+(junction (pt 288 464))
+(junction (pt 584 464))
+(junction (pt 608 464))
 (text "LEDs" (rect 1072 392 1101 411)(font "Intel Clear" (font_size 8)))
 (text "Push Switches (Push for LOW)" (rect 128 344 302 363)(font "Intel Clear" (font_size 8)))
 (text "DIP Switches" (rect 200 568 276 587)(font "Intel Clear" (font_size 8)))

@@ -43,7 +43,7 @@ begin
 	#10ps assert (aa==1) passed(); else failed();
 	
 	// 1 - Set bb to binary 0 using a decimal literal
-	bb = 1'b0;
+	bb = 1'd0;
 	#10ps assert (bb==1) passed(); else failed();
 
 	// 2 - Set databyte to binary 10101111 using a binary literal
@@ -63,7 +63,7 @@ begin
 	#10ps assert (datanibble == 4'b1110) passed(); else failed();
 
 	// 6 - Using a single statement (concatenation), set aa, bb and yy to bits 2,1 and 0 of datanibble
-	{aa, bb, yy}=datanibble[2:0];
+	{aa, bb, yy} = datanibble[2:0];
 	#10ps assert ((aa == 1) && (bb == 1) && (yy == 0))  passed(); else failed();
 
 	// 7 - Set the most significant 4 bits of databyte to datanibble, and the least significant 4 bits to the inverse of datanibble
@@ -73,7 +73,7 @@ begin
 	// UNPACKED ARRAYS
 
 	// 8 - Initialise arrayOfBits so that all values are equal to 0 - do not use the for-loop
-   	arrayOfBits
+   	arrayOfBits[7;0] = {0, 0, 0, 0, 0, 0, 0, 0};
 	// Test - write above this line
 	for (int n=0; n<8; n = n+1)
 	begin
@@ -81,11 +81,11 @@ begin
 	end
 
 	// 9 - Set elements 1 and 0 to binary 1 using a single statement
-	// WRITE SOLUTION HERE
+		arrayofBits[1:0] = {0, 0}
 	#10ps assert ((arrayOfBits[1] == 1) &&  (arrayOfBits[0] == 1))  passed(); else failed();
 
 	// 10 -In one statement, initialise all elements in arrayOfNibbles with the binary value 1010
-	// WRITE SOLUTION HERE
+		arrayofNibbles = 4'b1010
 	// Test - only write above
 	for (int n=0; n<8; n = n+1)
 	begin
