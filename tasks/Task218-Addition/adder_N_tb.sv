@@ -5,8 +5,8 @@ module adder_N_tb;
 	logic [N-1:0] P, Q;
 	logic [N-1:0] SUM;
 	logic Cout;
-	logic Cin;
-	
+	logic Cin;	
+
 	//Most significant bit of SUM = Cout
 	adder_N #(.N(N)) u1(SUM, Cout, P, Q, Cin);
 
