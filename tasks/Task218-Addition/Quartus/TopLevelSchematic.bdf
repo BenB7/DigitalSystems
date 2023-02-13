@@ -424,7 +424,7 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 568 176 737 214))
 )
 (symbol
-	(rect 312 400 488 480)
+	(rect 312 408 488 488)
 	(text "xor_adjacent" (rect 5 0 67 12)(font "Arial" ))
 	(text "inst5" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
@@ -449,7 +449,7 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 160 64))
 	)
-	(annotation_block (parameter)(rect 488 360 664 400))
+	(annotation_block (parameter)(rect 488 368 664 408))
 )
 (connector
 	(pt 176 88)
