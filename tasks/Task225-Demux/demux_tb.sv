@@ -8,11 +8,11 @@ demux u1 (Y, D, SEL);
 
 initial
 begin
-D='0;
-forever #10ps D=~D;
+D=1;
+//forever #10ps D=~D;
 SEL=3'b010;
 	begin
-	     if (Y==8'b00000100) $display ("PASS");
+	     assert (Y==8'b00000100) $display ("PASS");
 	     else $display ("FAIL");
 	end
 end

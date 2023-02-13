@@ -19,6 +19,7 @@ begin
 			$error("a = %d, expected Y=%d and got %d", n, expected_y[n], y);
 
 		// TODO: Add an assert statement to check the valid output
+		assert ()
 
 	end
 end
