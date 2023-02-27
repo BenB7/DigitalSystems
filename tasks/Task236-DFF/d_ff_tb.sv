@@ -24,6 +24,13 @@ initial begin
 	@(posedge n_Reset);
 	#1 assert (Q == 0) $display("PASS"); else $error("FAIL");	//Check Q
 
+	n_reset=0;
+	D=1;
+	@(posedge n_Reset);
+	Q = D
+	@(negedge n_Reset);
+	#1 assert (Q == D) $display("PASS"); else $error("FAIL");	//Check Q
+
 	//Test for when D = 1
 	@(negedge CLK);	//Wait for negative edge of clock
 	D = 1;		//Set D = 1
