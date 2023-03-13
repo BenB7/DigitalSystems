@@ -1,29 +1,32 @@
-module d_ff_tb;
+module d_ff1_tb;
 
 logic CLK = 0;
 logic D, Q, n_Reset;
 
 //Instantiate a DFF
-d_ff u1(Q,D,CLK,n_Reset);
+d_ff1 u1(Q,D,CLK,n_Reset);
 
 //Generate 5 clock cycles
 initial begin
 	CLK=0;
      	repeat(10) 
-		#50ps CLK = ~CLK;  
+		#50ps CLK = ~CLK;
+
+	n_Reset=0;
+	repeat(10)
+		#100ps n_Reset=~n_Reset;
 end 
 
 //Tests (synchronous - write on falling edge of the clock; read on rising)
 initial begin
 	//Initialise
+
 	D = 0;
-	n_Reset=1;
 	@(negedge n_Reset);
 	Q = 0;
 	@(posedge n_Reset);
 	#1 assert (Q == 0) $display("PASS"); else $error("FAIL");	//Check Q
 
-	n_reset=0;
 	D=1;
 	@(posedge n_Reset);
 	Q = D
